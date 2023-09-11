@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { observer } from "mobx-react-lite";
+import Display from './app/components/display/Display';
+import Keyboard from './app/components/keyboard/Keyboard';
+import { useEffect } from 'react';
+import viselica from './app/store/viselica';
+import Gamestarter from './app/components/gamestarter/Gamestarter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = observer(() => {
+    // useEffect(() => {
+    //   viselica.startGame();
+    // }, []);
+
+    return (
+      <div className='app-container'>
+        <Gamestarter/>
+        <Display/>
+        <Keyboard/>
+      </div>
+    )
+})
 
 export default App;

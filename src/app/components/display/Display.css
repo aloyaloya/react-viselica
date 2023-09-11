@@ -1,0 +1,147 @@
+.display-wrapper {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.display_word {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.word-letter {
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 1) inset;
+    -moz-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 1) inset;
+    box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 1) inset;
+    border-radius: 15px;
+    transition: all 200ms ease-in-out;
+    animation-name: emersion;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: emersion;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.word-letter_inner {
+    opacity: 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 32px;
+    user-select: none;
+    animation-name: show;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms;
+    -webkit-animation-name: show;
+    -webkit-animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 300ms;
+}
+
+@keyframes show{
+    0%   { 
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    75%   { 
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% { 
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.display_handman {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(75, 75, 75);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.detail_hidden {
+    opacity: 0;
+}
+
+.detail_show {
+    opacity: 0;
+    animation-name: detail_show;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+    -webkit-animation-name: detail_show;
+    -webkit-animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 200ms;
+}
+
+@keyframes detail_show{
+    0%   { 
+        opacity: 0.8;
+        transform: scale(0.2);
+    }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.detail_1 {
+    position: absolute;
+    top: 3rem;
+}
+
+.detail_2 {
+    position: absolute;
+    top: 4.5rem;
+}
+
+.detail_3 {
+    position: absolute;
+    top: 15rem;
+}
+
+.detail_4 {
+    position: absolute;
+    top: 16rem;
+}
+
+.detail_5 {
+    position: absolute;
+    top: 16rem;
+    rotate: 45deg;
+    right: 53rem;
+}
+
+.detail_6 {
+    position: absolute;
+    top: 16rem;
+    rotate: -45deg;
+    right: 46.3rem;
+}
+
+.detail_7 {
+    position: absolute;
+    top: 24.5rem;
+    rotate: 25deg;
+    right: 51.7rem;
+}
+
+.detail_8 {
+    position: absolute;
+    top: 24.5rem;
+    rotate: -25deg;
+    right: 47.7rem;
+}
